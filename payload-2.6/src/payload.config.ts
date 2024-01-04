@@ -18,6 +18,8 @@ export default buildConfig({
   editor: slateEditor({}),
   collections: [Users, Media],
   globals: [Home],
+  cors: [process.env.PAYLOAD_URL],
+  csrf: [process.env.PAYLOAD_URL],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

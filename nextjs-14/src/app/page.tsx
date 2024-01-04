@@ -9,9 +9,13 @@ export default async function Home() {
 
   const firstLogoURL = payloadURL + home?.FirstLogo?.url || ''
   const firstLogoAlt = home?.FirstLogo?.alt || ''
+  const firstLogoWidth = home?.FirstLogo?.width || 0
+  const firstLogoHeight = home?.FirstLogo?.height || 0
 
   const secondLogoURL = payloadURL + home?.SecondLogo?.url || ''
   const secondLogoAlt = home?.SecondLogo?.alt || ''
+  const secondLogoWidth = home?.SecondLogo?.width || 0
+  const secondLogoHeight = home?.SecondLogo?.height || 0
 
   return (
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -25,16 +29,16 @@ export default async function Home() {
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src={firstLogoURL}
                 alt={firstLogoAlt}
-                width={180}
-                height={37}
+                width={firstLogoWidth}
+                height={firstLogoHeight}
                 priority
             />
             <Image
                 className="mt-8 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src={secondLogoURL}
                 alt={secondLogoAlt}
-                width={230}
-                height={30}
+                width={secondLogoWidth}
+                height={secondLogoHeight}
                 priority
             />
             <code className="mt-16 font-mono font-normal text-base">
