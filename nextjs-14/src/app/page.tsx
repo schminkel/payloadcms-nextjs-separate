@@ -43,8 +43,6 @@ export default async function Home() {
             />
             <code className="mt-16 font-mono font-normal text-base">
               {homeText}
-              <br/>
-              111
             </code>
           </div>
         </div>
